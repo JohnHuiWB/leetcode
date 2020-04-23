@@ -1,25 +1,4 @@
-# Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-    @staticmethod
-    def create(inputs):
-        r = tmp = ListNode(0)
-        if inputs:
-            for i in inputs:
-                tmp.next = ListNode(i)
-                tmp = tmp.next
-        return r.next
-
-    def print_values(self):
-        tmp = self
-        l = []
-        while tmp:
-            l.append(tmp.val)
-            tmp = tmp.next
-        print(l)
+from utils import ListNode
 
 
 class Solution(object):
@@ -55,7 +34,7 @@ if __name__ == '__main__':
     s = Solution()
     input_l1 = ListNode.create([1, 2, 4])
     input_l2 = ListNode.create([1, 3, 4])
-    input_l1.print_values()
-    input_l2.print_values()
-    s.mergeTwoLists(input_l1, input_l2).print_values()
-    s.mergeTwoLists2(input_l1, input_l2).print_values()
+    print(input_l1)
+    print(input_l2)
+    print(s.mergeTwoLists(input_l1, input_l2))
+    print(s.mergeTwoLists2(input_l1, input_l2))
